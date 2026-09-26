@@ -1,0 +1,204 @@
+/* ===== CONTACT ===== */
+.contact {
+  background: var(--bg-secondary);
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.contact__info {
+  animation: slideInLeft 0.6s ease forwards;
+}
+
+.contact__info-text {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 36px;
+}
+
+.contact__details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact__detail-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  transition: var(--transition-fast);
+}
+
+.contact__detail-item:hover {
+  border-color: var(--border-hover);
+  transform: translateX(6px);
+  box-shadow: var(--shadow-glow);
+}
+
+.contact__detail-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  background: rgba(124, 91, 245, 0.1);
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.contact__detail-text {
+  font-size: 0.9rem;
+}
+
+.contact__detail-label {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.contact__detail-value {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Contact Form */
+.contact__form-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact__form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.contact__form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact__form-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+}
+
+.contact__form-input,
+.contact__form-textarea {
+  padding: 14px 18px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-family: var(--font-secondary);
+  transition: var(--transition-fast);
+  outline: none;
+}
+
+.contact__form-input:focus,
+.contact__form-textarea:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.contact__form-input::placeholder,
+.contact__form-textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.contact__form-textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.contact__form-submit {
+  padding: 16px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent-gradient);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  font-family: var(--font-secondary);
+  box-shadow: 0 4px 15px rgba(124, 91, 245, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.contact__form-submit:hover {
+  box-shadow: 0 8px 30px rgba(124, 91, 245, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Social links */
+.contact__socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.contact__social-link {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 1.2rem;
+  transition: var(--transition-fast);
+  cursor: pointer;
+}
+
+.contact__social-link:hover {
+  border-color: var(--accent-primary);
+  background: rgba(124, 91, 245, 0.1);
+  transform: translateY(-3px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact__form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__form-card {
+    padding: 28px 22px;
+  }
+}

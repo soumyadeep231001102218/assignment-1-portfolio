@@ -1,0 +1,203 @@
+/* ===== HEADER / HERO ===== */
+.header {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 120px 0 80px;
+}
+
+.header__bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(124, 91, 245, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 91, 245, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+}
+
+.header__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.12;
+  animation: float 8s ease-in-out infinite;
+}
+
+.header__orb--1 {
+  width: 400px;
+  height: 400px;
+  background: var(--accent-primary);
+  top: 10%;
+  right: 15%;
+  animation-delay: 0s;
+}
+
+.header__orb--2 {
+  width: 300px;
+  height: 300px;
+  background: var(--accent-secondary);
+  bottom: 15%;
+  left: 10%;
+  animation-delay: 3s;
+}
+
+.header__content {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 0.8s ease;
+}
+
+.header__greeting {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--accent-primary);
+  margin-bottom: 16px;
+  padding: 8px 20px;
+  background: rgba(124, 91, 245, 0.1);
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  letter-spacing: 1px;
+}
+
+.header__name {
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.header__name-highlight {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header__tagline {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-weight: 300;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.header__btn {
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  font-family: var(--font-secondary);
+  border: none;
+}
+
+.header__btn--primary {
+  background: var(--accent-gradient);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(124, 91, 245, 0.35);
+}
+
+.header__btn--primary:hover {
+  box-shadow: 0 8px 30px rgba(124, 91, 245, 0.5);
+  transform: translateY(-2px);
+}
+
+.header__btn--secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.header__btn--secondary:hover {
+  border-color: var(--accent-primary);
+  background: rgba(124, 91, 245, 0.08);
+  transform: translateY(-2px);
+}
+
+.header__stats {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border-color);
+}
+
+.header__stat-number {
+  font-family: var(--font-primary);
+  font-size: 2rem;
+  font-weight: 800;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header__stat-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.header__scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: float 3s ease-in-out infinite;
+  cursor: pointer;
+}
+
+.header__scroll-arrow {
+  width: 24px;
+  height: 24px;
+  border-right: 2px solid var(--accent-primary);
+  border-bottom: 2px solid var(--accent-primary);
+  transform: rotate(45deg);
+  opacity: 0.6;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .header {
+    padding: 100px 0 60px;
+  }
+
+  .header__stats {
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .header__actions {
+    flex-direction: column;
+  }
+
+  .header__btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
