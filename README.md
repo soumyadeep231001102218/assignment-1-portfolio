@@ -39,7 +39,7 @@ To run this project locally, follow these steps:
    npm run dev
    ```
 
-5. Open your browser and visit `http://localhost:5173` to view the site.
+5. Open your browser and visit the live site at: [https://soumyadeep231001102218.github.io/assignment-1-portfolio/](https://soumyadeep231001102218.github.io/assignment-1-portfolio/)
 
 ## Author
 Soumyadeep Paul
